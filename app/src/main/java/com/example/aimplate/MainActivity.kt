@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import com.example.aimplate.databinding.ActivityMainBinding
 import android.graphics.Color
+import android.view.WindowManager
 
 
 class MainActivity : Activity(), SensorEventListener {
@@ -23,8 +24,8 @@ class MainActivity : Activity(), SensorEventListener {
         //AppComatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         square = findViewById(R.id.dSquare)
 
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setUpSensorStuff()
-
     }
 
     private fun setUpSensorStuff() {
