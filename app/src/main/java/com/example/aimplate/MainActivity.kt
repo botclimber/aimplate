@@ -33,7 +33,7 @@ class MainActivity : Activity(), SensorEventListener {
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
 
         // Specify the sensor you want to listen to
-        sensorManager.getDefaultSensor(Sensor.)?.also { accelerometer ->
+        sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)?.also { accelerometer ->
             sensorManager.registerListener(
                 this,
                 accelerometer,
